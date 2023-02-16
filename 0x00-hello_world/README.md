@@ -5,3 +5,4 @@
 4-puts.c => prints ""Programming is like building a multilingual puzzle" followed by a new line.
 5-printf.c => prints a statement using printf function.
 6-size.c => prints the size of various types on the computer
+100-intel => generates assembly code (Intel syntax) of a C code and save it in an output file
