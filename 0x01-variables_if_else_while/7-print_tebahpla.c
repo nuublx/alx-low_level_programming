@@ -11,7 +11,7 @@
 */
 int main(void)
 {
-	char message[] = "abcdfghijklmnoprstuvwxyz";
+	char message[] = "abcdefghijklmnopqrstuvwxyz";
 	int count;
 
 	for (count = 23; count >= 0; count--)
