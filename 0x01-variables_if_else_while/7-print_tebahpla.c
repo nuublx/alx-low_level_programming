@@ -14,7 +14,7 @@ int main(void)
 	char message[] = "abcdefghijklmnopqrstuvwxyz";
 	int count;
 
-	for (count = 23; count >= 0; count--)
+	for (count = 25; count >= 0; count--)
 	{
 		putchar(message[count]);
 	}
