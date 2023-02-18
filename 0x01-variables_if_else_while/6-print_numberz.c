@@ -11,12 +11,11 @@
 */
 int main(void)
 {
-	char message[] = "0123456789";
 	int count;
 
 	for (count = 0; count < 10; count++)
 	{
-		putchar(message[count]);
+		putchar(count+'0');
 	}
 	putchar('\n');
 	return (0);
