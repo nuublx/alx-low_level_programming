@@ -6,7 +6,7 @@ void print_alphabet(void)
 
 	for (i = 0; i < 26; i++)
 	{
-		_putchar(i+'a');
-	}	
+		_putchar(i + 'a');
+	}
 	_putchar('\n');
 }
