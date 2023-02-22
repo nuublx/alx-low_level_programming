@@ -11,7 +11,7 @@
 */
 void print_times_table(int n)
 {
-	int i, j, value, f_digit, l_digit, m_digit;
+	int i, j, value;
 
 	if (n > 15 || n < 0)
 		return;
@@ -22,16 +22,15 @@ void print_times_table(int n)
 			value = i * j;
 			if (value < 10)
 			{
+				if (j == 0)
+					_putchar('0');
+
 				print_one_digit(value);
 			}
 			else if (value < 100)
-			{
 				print_two_digits(value);
-			}
 			else
-			{
 				print_three_digits(value);
-			}
 			if (j == n)
 				continue;
 			_putchar(',');
@@ -53,16 +52,9 @@ void print_times_table(int n)
 */
 void print_one_digit(int value)
 {
-	if (j == 0)
-	{
-		_putchar('0');
-	}
-	else
-	{
-		_putchar(' ');
-		_putchar(' ');
-		_putchar(value + '0');
-	}
+	_putchar(' ');
+	_putchar(' ');
+	_putchar(value + '0');
 }
 
 /**
@@ -76,6 +68,8 @@ void print_one_digit(int value)
 */
 void print_two_digits(int value)
 {
+	int l_digit, f_digit;
+
 	l_digit = value % 10;
 	f_digit = value / 10;
 	_putchar(' ');
@@ -94,6 +88,8 @@ void print_two_digits(int value)
 */
 void print_three_digits(int value)
 {
+	int l_digit, f_digit, m_digit;
+
 	l_digit =  value % 10;
 	value = value / 10;
 	m_digit = value % 10;
