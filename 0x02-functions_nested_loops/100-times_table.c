@@ -11,7 +11,7 @@
 */
 void print_times_table(int n)
 {
-	int i, j, value, f_digit, l_digit;
+	int i, j, value, f_digit, l_digit, m_digit;
 
 	for (i = 0; i < (n + 1); i++)
 	{
@@ -27,14 +27,26 @@ void print_times_table(int n)
 				else
 				{
 					_putchar(' ');
+					_putchar(' ');
 					_putchar(value + '0');
 				}
 			}
-			else
+			else if (value < 100)
 			{
 				l_digit = value % 10;
 				f_digit = value / 10;
+				_putchar(' ');
 				_putchar(f_digit + '0');
+				_putchar(l_digit + '0');
+			}
+			else
+			{
+				l_digit =  value % 10;
+				value = value / 10;
+				m_digit = value % 10;
+				f_digit = value / 10;
+				_putchar(f_digit + '0');
+				_putchar(m_digit + '0');
 				_putchar(l_digit + '0');
 			}
 			if (j == 9)
