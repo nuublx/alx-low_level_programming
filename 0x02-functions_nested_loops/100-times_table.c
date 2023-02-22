@@ -24,8 +24,8 @@ void print_times_table(int n)
 			{
 				if (j == 0)
 					_putchar('0');
-
-				print_one_digit(value);
+				else
+					print_one_digit(value);
 			}
 			else if (value < 100)
 				print_two_digits(value);
