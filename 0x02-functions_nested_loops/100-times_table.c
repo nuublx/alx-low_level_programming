@@ -1,7 +1,7 @@
 #include"main.h"
 
 /**
- * times_table - prints output takes no parameters
+ * print_times_table - prints output takes no parameters
  *
  * Description: prints times table from 0 to n
  *
@@ -22,34 +22,15 @@ void print_times_table(int n)
 			value = i * j;
 			if (value < 10)
 			{
-				if (j == 0)
-				{
-					_putchar('0');
-				}
-				else
-				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(value + '0');
-				}
+				print_one_digit(value);
 			}
 			else if (value < 100)
 			{
-				l_digit = value % 10;
-				f_digit = value / 10;
-				_putchar(' ');
-				_putchar(f_digit + '0');
-				_putchar(l_digit + '0');
+				print_two_digits(value);
 			}
 			else
 			{
-				l_digit =  value % 10;
-				value = value / 10;
-				m_digit = value % 10;
-				f_digit = value / 10;
-				_putchar(f_digit + '0');
-				_putchar(m_digit + '0');
-				_putchar(l_digit + '0');
+				print_three_digits(value);
 			}
 			if (j == n)
 				continue;
@@ -58,4 +39,66 @@ void print_times_table(int n)
 		}
 		_putchar('\n');
 	}
+}
+
+
+/**
+ * print_one_digit - prints output takes no parameters
+ *
+ * Description: prints a one digit number
+ *
+ * Return: void Always
+ *
+ * @value: number to be printed
+*/
+void print_one_digit(int value)
+{
+	if (j == 0)
+	{
+		_putchar('0');
+	}
+	else
+	{
+		_putchar(' ');
+		_putchar(' ');
+		_putchar(value + '0');
+	}
+}
+
+/**
+ * print_two_digits - prints output takes no parameters
+ *
+ * Description: prints a two digit number
+ *
+ * Return: void Always
+ *
+ * @value: number to be printed
+*/
+void print_two_digits(int value)
+{
+	l_digit = value % 10;
+	f_digit = value / 10;
+	_putchar(' ');
+	_putchar(f_digit + '0');
+	_putchar(l_digit + '0');
+}
+
+/**
+ * print_three_digits - prints output takes no parameters
+ *
+ * Description: prints a three digit number
+ *
+ * Return: void Always
+ *
+ * @value: number to be printed
+*/
+void print_three_digits(int value)
+{
+	l_digit =  value % 10;
+	value = value / 10;
+	m_digit = value % 10;
+	f_digit = value / 10;
+	_putchar(f_digit + '0');
+	_putchar(m_digit + '0');
+	_putchar(l_digit + '0');
 }
