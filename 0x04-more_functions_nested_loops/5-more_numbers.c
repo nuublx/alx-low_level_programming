@@ -5,7 +5,7 @@
 
 void more_numbers(void)
 {
-	int i, f_digit, l_digit;
+	int i;
 
 	for (i = 0; i < 15; i++)
 	{
