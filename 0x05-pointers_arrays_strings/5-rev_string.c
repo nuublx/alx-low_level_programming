@@ -15,10 +15,10 @@ void rev_string(char *s)
 	j = 0;
 	while (i > -1 && s[j] != '\0')
 	{
-		e = s[i];
-		b = s[j];
-		s[j] = e;
-		s[i] = b;
+		e = *(s + i);
+		b = *(s + j);
+		*(s + j) = e;
+		*(s + i) = b;
 		i--;
 		j++;
 	}
