@@ -18,6 +18,7 @@ int _atoi(char *s)
 	{
 		sum += (s[i] - '0') * digit;
 		digit *= 10;
+		i--;
 	}
 
 	if (s[i] == '-')
