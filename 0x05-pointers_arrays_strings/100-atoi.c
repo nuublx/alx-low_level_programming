@@ -24,10 +24,9 @@ int _atoi(char *s)
 		sum = sum * -1;
 	else if (s[i] != '+' && s[i] >= '0' && s[i] <= '9')
 		sum += (s[i] - '0') * digit;
-	else if (s[i] == '+')
-		return (sum);
-	else
-		return (0);
+
+	else if (s[i] < '0' || s[i] > '9')
+		return (0); 
 	return (sum);
 
 }
