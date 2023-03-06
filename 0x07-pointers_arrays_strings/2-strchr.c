@@ -1,3 +1,4 @@
+#include<stddef.h>
 /**
  * _strchr - returns a pointer to a position of a character in string
  * @s: string passed to check inside of it
@@ -14,5 +15,6 @@ char *_strchr(char *s, char c)
 		if (*(s + i) == c)
 			return (s + i);
 	}
+
 	return (NULL);
 }
