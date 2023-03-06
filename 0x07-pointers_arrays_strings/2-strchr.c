@@ -1,4 +1,4 @@
-#include<stddef.h>
+#include<stdio.h>
 /**
  * _strchr - returns a pointer to a position of a character in string
  * @s: string passed to check inside of it
@@ -8,13 +8,14 @@
  */
 char *_strchr(char *s, char c)
 {
-	unsigned int i;
+	char a;
 
-	for (i = 0; *(s + i) != '\0'; i++)
+	a = *s++;
+	while (a != '\0')
 	{
-		if (*(s + i) == c)
-			return (s + i);
+		if (a == c)
+			return (s - 1);
+		a = *s++;
 	}
-
 	return (NULL);
 }
