@@ -16,7 +16,7 @@ int is_palindrome(char *s)
 	while (s[r] != '\0')
 		r++;
 	r--;
-	return actual_is_palindrome(s, 0, r);
+	return (actual_is_palindrome(s, 0, r));
 }
 /**
  * actual_is_palindrome - runs recursively to check if string is palindrome
@@ -33,7 +33,7 @@ int actual_is_palindrome(char *s, int strt, int end)
 	if (strt <= end)
 	{
 		if (s[strt] == s[end])
-			return actual_is_palindrome(s, strt + 1, end - 1);
+			return (actual_is_palindrome(s, strt + 1, end - 1));
 	}
 	return (0);
 }
