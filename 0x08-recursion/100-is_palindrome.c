@@ -9,14 +9,10 @@ int actual_is_palindrome(char *s, int strt, int end);
  */
 int is_palindrome(char *s)
 {
-	int r;
+	if (*s == 0)
+		return (1);
 
-	r = 0;
-
-	while (s[r] != '\0')
-		r++;
-	r--;
-	return (actual_is_palindrome(s, 0, r));
+	return (actual_is_palindrome(s, 0, _strlen_recursion(s) - 1));
 }
 /**
  * actual_is_palindrome - runs recursively to check if string is palindrome
