@@ -40,7 +40,6 @@ int mincoins(int *coins, int n, int change)
 
 	for (i = 0; i < n; i++)
 	{
-		printf("current change: %d\ncurrent coin: %d\n", change, coins[i]);
 		if (change >= coins[i])
 		{
 			res = mincoins(coins, n, change - coins[i]) + 1;
