@@ -11,8 +11,7 @@ int main(int args, char **argv)
 {
 	int i;
 
-	if (args > 1)
-		for (i = 1; i < args; i++)
-			printf("%s\n", argv[i]);
+	for (i = 1; i < args; i++)
+		printf("%s\n", argv[i]);
 	return (0);
 }
