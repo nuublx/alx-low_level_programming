@@ -29,6 +29,13 @@ int main(int argc, char **argv)
 	printf("%d\n", sum);
 	return (0);
 }
+/**
+ * is_number - checks if the string passed is all digits
+ * @str: string to check
+ *
+ * Return: 0 if fail, 1 if success
+ */
+
 int is_number(char *str)
 {
 	while (*str != '\0')
