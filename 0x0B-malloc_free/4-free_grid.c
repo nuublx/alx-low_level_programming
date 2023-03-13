@@ -5,7 +5,7 @@
 /**
  * free_grid - frees a 2d array from memory
  * @grid: 2d array to free
- * @heigh: height of the 2d array
+ * @height: height of the 2d array
  *
  * Return: void ALWAYS
  */
