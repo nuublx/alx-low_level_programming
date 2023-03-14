@@ -18,7 +18,8 @@ char *argstostr(int ac, char **av)
 	n = 0;
 	for (i = 0; i < ac; i++)
 	{
-		while (av[i][n] != '\0')
+		j = 0;
+		while (av[i][j++] != '\0')
 			n++;
 		n++;
 	}
