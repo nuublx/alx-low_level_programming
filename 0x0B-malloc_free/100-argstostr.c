@@ -20,8 +20,9 @@ char *argstostr(int ac, char **av)
 	{
 		while (av[i][n] != '\0')
 			n++;
+		n++;
 	}
-	str = (char *)malloc((n + ac) * sizeof(char));
+	str = (char *)malloc(n * sizeof(char) + 1);
 
 	if (str == NULL)
 		return (NULL);
