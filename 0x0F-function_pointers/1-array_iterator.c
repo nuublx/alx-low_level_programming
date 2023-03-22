@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 /**
- * array_iterator - executes a function given as a parameter on each element on an array
- * @array: array to execute the function on aech element of 
+ * array_iterator - executes a function given on each element on an array
+ * @array: array to execute the function on each element of
  * @size: size of the array
  * @action: function to execute on each element of the array
  *
